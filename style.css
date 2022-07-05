@@ -1,3 +1,46 @@
 body {
     background: #fff;
+    font-family: sans-serif;
+    color: #000;
+}
+
+nav#navbar {
+    height: 100%;
+    width: 200px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    overflow-x: hidden;
+    border-right: solid black 1px;
+}
+
+h1 {
+    text-align: right;
+    padding-right: 10px;
+}
+
+#navbar ul {
+    padding: 0px;
+    line-height: 30px;
+}
+
+#navbar li {
+    font-size: 18px;
+    list-style-type: none;
+    text-align: right;
+    padding-right: 10px;
+}
+
+#navbar li:first-child {
+    border-top: solid black 1px;
+    padding-top: 10px;
+}
+
+#navbar a {
+    text-decoration: none;
+}
+
+#navbar a:hover {
+    text-decoration: underline;
 }
