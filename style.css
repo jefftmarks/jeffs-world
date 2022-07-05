@@ -24,7 +24,7 @@ h1 {
 
 #navbar ul {
     padding: 0px;
-    line-height: 50px;
+    line-height: 70px;
 }
 
 #navbar li {
@@ -39,15 +39,7 @@ h1 {
     padding-top: 10px;
 }
 
-#navbar a {
-    color: #0000EE;
-    text-decoration: none;
-}
-
-#navbar a:hover {
-    font-size: 25px;
-}
-
-#navbar li:hover {
-    content: "Click Me!";
+#navbar span:hover {
+    cursor: pointer;
+    font-weight: bold;
 }
