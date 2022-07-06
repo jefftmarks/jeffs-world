@@ -8,6 +8,10 @@ body {
     color: #000;
 }
 
+a {
+    target:"_blank";
+}
+
 /* navbar styles */
 
 nav#navbar {
@@ -79,4 +83,13 @@ main > div {
 
 .blockquote .quote {
     font-style: italic;
+}
+
+#bio-list {
+    padding-left: 20px;
+}
+
+#bio-list li {
+    margin-top: 20px;
+    line-heighT: 25px;
 }

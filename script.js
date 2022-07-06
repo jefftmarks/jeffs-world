@@ -1,3 +1,5 @@
+// navbar variables
+
 const bio = document.getElementById("bio");
 const gators = document.getElementById("gators");
 const games = document.getElementById("games");
@@ -8,7 +10,7 @@ const gamesBlock = document.getElementById("games-block");
 
 const age = document.getElementById("age");
 
-// event listeners for navbar hover
+// navbar hover
 
 bio.addEventListener("mouseover", function() {
     gators.style.color="#fff";
@@ -49,7 +51,7 @@ games.addEventListener("mouseout", function() {
     games.textContent="Games";
 });
 
-// event listeners for section display
+// nav section display
 
 bio.addEventListener("click", function() {
     bioBlock.style.display="block";
@@ -68,3 +70,16 @@ games.addEventListener("click", function() {
     bioBlock.style.display="none";
     gatorsBlock.style.display="none";
 });
+
+// age variables
+
+const today = new Date();
+const year = today.getFullYear();
+const month = today.getMonth() + 1;
+const day = today.getDate();
+const yearsElapsed =  year - 1993;
+const monthsElapsed = month - 1;
+const daysElapsed = day - 14;
+const ageInDays = daysElapsed + (30.437 * monthsElapsed) + (365.25 * yearsElapsed);
+const exactAge = document.getElementById("age");
+exactAge.textContent = ageInDays / 365.25;
