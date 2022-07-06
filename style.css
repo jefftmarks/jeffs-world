@@ -116,6 +116,22 @@ main {
     color: #154a23;
 }
 
+#games-blockquote {
+    background: #f8e3fa;
+    color: #d732e6;
+    text-align: center;
+    width: 500px;
+    height: 100px;
+    padding: 10px;
+    margin-left: 0px;
+    border-radius: 0px 50px;
+}
+
+#games-blockquote h5 {
+    margin-top: -8px;
+    color: #6e2375;
+}
+
 /* gallery styles */
 
 #gallery {
