@@ -10,7 +10,7 @@ const gamesBlock = document.getElementById("games-block");
 
 const age = document.getElementById("age");
 
-// navbar hover
+// navbar mouseover and mouseout
 
 bio.addEventListener("mouseover", function() {
     gators.style.color="#fff";
@@ -51,7 +51,7 @@ games.addEventListener("mouseout", function() {
     games.textContent="Games";
 });
 
-// nav section display
+// nav click
 
 bio.addEventListener("click", function() {
     bioBlock.style.display="block";

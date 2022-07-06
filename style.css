@@ -21,9 +21,19 @@ nav#navbar {
     border-right: solid black 1px;
 }
 
+header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 10px;
+}
+
 h1 {
-    text-align: right;
-    padding-right: 10px;
+    margin-left: -10px;
+}
+
+#smiley-face {
+    font-size: 40px;
 }
 
 #navbar ul {
