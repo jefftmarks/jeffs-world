@@ -152,3 +152,47 @@ main {
     padding: 0 5px;
     border-radius: 10px;
   }
+
+  /* game styles */
+
+#game-board {
+    width: 500px;
+    height: 500px;
+    position: relative;
+}
+
+#game-board img {
+    margin-left: 20px;
+    width: 250px;
+    height: 250px;
+    object-fit: contain;
+    position: absolute;
+  }
+
+#gator-1 {
+    display: initial;
+    left: 0px;
+    top: 0px;
+}
+
+#gator-2 {
+    display: none;
+    left: 250px;
+    top: 0px;
+}
+
+#gator-3 {
+    display: none;
+    left: 0px;
+    bottom: 0px;
+}
+
+#gator-3:hover {
+    cursor: pointer;
+}
+
+#gator-4 {
+    display: none;
+    left: 250px;
+    bottom: 0px;
+}

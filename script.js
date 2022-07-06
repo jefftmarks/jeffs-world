@@ -1,4 +1,4 @@
-// navbar variables
+// variables
 
 const bio = document.getElementById("bio");
 const gators = document.getElementById("gators");
@@ -9,6 +9,11 @@ const gatorsBlock = document.getElementById("gators-block");
 const gamesBlock = document.getElementById("games-block");
 
 const age = document.getElementById("age");
+
+const gatorOne = document.getElementById("gator-1");
+const gatorTwo = document.getElementById("gator-2");
+const gatorThree = document.getElementById("gator-3");
+const gatorFour = document.getElementById("gator-4");
 
 // navbar mouseover and mouseout
 
@@ -69,6 +74,9 @@ games.addEventListener("click", function() {
     gamesBlock.style.display="block";
     bioBlock.style.display="none";
     gatorsBlock.style.display="none";
+
+    gatorOne.style.display="initial";
+    gatorThree.style.display="none";
 });
 
 // age variables
@@ -83,3 +91,30 @@ const daysElapsed = day - 14;
 const ageInDays = daysElapsed + (30.437 * monthsElapsed) + (365.25 * yearsElapsed);
 const exactAge = document.getElementById("age");
 exactAge.textContent = ageInDays / 365.25;
+
+// games mouseover
+
+gatorOne.addEventListener("mouseover", function() {
+    if (gatorOne.style.display = "initial") {
+        gatorOne.style.display="none";
+        gatorFour.style.display="initial";
+    };
+});
+
+gatorFour.addEventListener("mouseover", function() {
+    if (gatorFour.style.display = "initial") {
+        gatorFour.style.display="none";
+        gatorTwo.style.display="initial";
+    };
+});
+
+gatorTwo.addEventListener("mouseover", function() {
+    if (gatorTwo.style.display = "initial") {
+        gatorTwo.style.display="none";
+        gatorThree.style.display="initial";
+    };
+});
+
+gatorThree.addEventListener("click", function() {
+    alert("Wow... You won? I can't believe you won. Honestly, congratulations. I'm happy for you. You caught the alligator.");
+})
