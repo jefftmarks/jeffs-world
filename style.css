@@ -71,7 +71,7 @@ main {
 
 /* blockquote styles */
 
-.blockquote {
+#bio-blockquote {
     background: #cff1fc;
     color: #2374f7;
     text-align: center;
@@ -82,12 +82,12 @@ main {
     border-radius: 0px 50px;
 }
 
-.blockquote h5 {
+#bio-blockquote h5 {
     margin-top: -8px;
     color: #1d4585;
 }
 
-.blockquote .quote {
+#bio-blockquote .quote {
     font-style: italic;
 }
 
@@ -99,3 +99,40 @@ main {
     margin-top: 20px;
     line-heighT: 25px;
 }
+
+#gators-blockquote {
+    background: #b7e8c4;
+    color: #19a63e;
+    text-align: center;
+    width: 650px;
+    height: 100px;
+    padding: 10px;
+    margin-left: 0px;
+    border-radius: 0px 50px;
+}
+
+#gators-blockquote h5 {
+    margin-top: -8px;
+    color: #154a23;
+}
+
+/* gallery styles */
+
+#gallery {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 1000px;
+    margin-top: 15px;
+}
+
+#gallery img {
+    width: 50%;
+    height: 280px;
+    object-fit: cover;
+    margin-top: 10px;
+    padding: 0 5px;
+    border-radius: 10px;
+  }
