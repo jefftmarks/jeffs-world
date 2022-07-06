@@ -42,4 +42,15 @@ h1 {
 #navbar span:hover {
     cursor: pointer;
     font-weight: bold;
+    font-size: 25px;
+}
+
+/* main section styles */
+
+main {
+    margin-left: 220px;
+}
+
+main div {
+    display: none;
 }
