@@ -8,15 +8,11 @@ body {
     color: #000;
 }
 
-a {
-    target:"_blank";
-}
-
 /* navbar styles */
 
 nav#navbar {
     height: 100%;
-    width: 200px;
+    width: 220px;
     position: fixed;
     z-index: 1;
     top: 0;
@@ -50,16 +46,16 @@ h1 {
 #navbar span:hover {
     cursor: pointer;
     font-weight: bold;
-    font-size: 25px;
+    font-size: 40px;
 }
 
 /* main section styles */
 
 main {
-    margin-left: 220px;
+    margin-left: 240px;
 }
 
-main > div {
+#gators-block, #games-block {
     display: none;
 }
 

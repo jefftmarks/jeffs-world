@@ -16,7 +16,7 @@ bio.addEventListener("mouseover", function() {
     gators.style.color="#fff";
     games.style.color="#fff";
     bio.style.textDecoration="underline";
-    bio.textContent="CLICK ME";
+    bio.textContent="BIO";
 });
 bio.addEventListener("mouseout", function() {
     gators.style.color="#000";
@@ -29,7 +29,7 @@ gators.addEventListener("mouseover", function() {
     bio.style.color="#fff";
     games.style.color="#fff";
     gators.style.textDecoration="underline";
-    gators.textContent="CLICK ME";
+    gators.textContent="GATORS";
 });
 gators.addEventListener("mouseout", function() {
     bio.style.color="#000";
@@ -42,7 +42,7 @@ games.addEventListener("mouseover", function() {
     bio.style.color="#fff";
     gators.style.color="#fff";
     games.style.textDecoration="underline";
-    games.textContent="CLICK  ME";
+    games.textContent="GAMES";
 });
 games.addEventListener("mouseout", function() {
     bio.style.color="#000";
