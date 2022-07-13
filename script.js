@@ -202,6 +202,7 @@ gatorTwo.addEventListener("mouseover", function() {
 });
 
 gatorThree.addEventListener("click", function() {
+    //gatorThree.style.transform = "rotate(180deg)";
     alert("Wow... You won? I can't believe you won. Honestly, congratulations. I'm happy for you. You caught the alligator.");
 })
 
