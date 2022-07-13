@@ -20,39 +20,39 @@ const gatorFour = document.getElementById("gator-4");
 bio.addEventListener("mouseover", function() {
     gators.style.color="#fff";
     games.style.color="#fff";
-    bio.style.textDecoration="underline";
+    //bio.style.color="#0000EE";
     bio.textContent="BIO";
 });
 bio.addEventListener("mouseout", function() {
     gators.style.color="#000";
     games.style.color="#000";
-    bio.style.textDecoration="none";
+    //bio.style.color="#000";
     bio.textContent="Bio";
 });
 
 gators.addEventListener("mouseover", function() {
     bio.style.color="#fff";
     games.style.color="#fff";
-    gators.style.textDecoration="underline";
+    //gators.style.color="#0000EE";
     gators.textContent="GATORS";
 });
 gators.addEventListener("mouseout", function() {
     bio.style.color="#000";
     games.style.color="#000";
-    gators.style.textDecoration="none";
+    //gators.style.color="#000";
     gators.textContent="Gators";
 });
 
 games.addEventListener("mouseover", function() {
     bio.style.color="#fff";
     gators.style.color="#fff";
-    games.style.textDecoration="underline";
+    //games.style.color="#0000EE";
     games.textContent="GAMES";
 });
 games.addEventListener("mouseout", function() {
     bio.style.color="#000";
     gators.style.color="#000";
-    games.style.textDecoration="none";
+    //games.style.color="#000";
     games.textContent="Games";
 });
 
@@ -80,6 +80,29 @@ games.addEventListener("click", function() {
     gatorThree.style.display="none";
     gatorFour.style.display="none";
 });
+
+// nav mousedown & mouseup
+
+bio.addEventListener("mousedown", function() {
+    bio.style.color="red";
+})
+bio.addEventListener("mouseup", function() {
+    bio.style.color="#000";
+})
+
+gators.addEventListener("mousedown", function() {
+    gators.style.color="red";
+})
+gators.addEventListener("mouseup", function() {
+    gators.style.color="#000";
+})
+
+games.addEventListener("mousedown", function() {
+    games.style.color="red";
+})
+games.addEventListener("mouseup", function() {
+    games.style.color="#000";
+})
 
 // age variables
 

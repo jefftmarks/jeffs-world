@@ -57,6 +57,7 @@ h1 {
     cursor: pointer;
     font-weight: bold;
     font-size: 40px;
+    text-decoration: underline;
 }
 
 /* main section styles */
@@ -173,13 +174,14 @@ main {
 
   /* game styles */
 
-#game-board {
+#catch-board {
     width: 500px;
     height: 500px;
     position: relative;
+    display: none;
 }
 
-#game-board img {
+#catch-board img {
     margin-left: 20px;
     width: 250px;
     height: 250px;
