@@ -231,9 +231,9 @@ window.addEventListener("keydown", function(e) {
             }
             break;
         case "ArrowUp":
-            if (parseInt(questPiece.style.bottom) < 400) {
+            if (parseInt(questPiece.style.bottom) < 429.06) {
                 questPiece.style.bottom = parseInt(questPiece.style.bottom) + 5 + "px";
             }
             break;
-}
+    }
 })

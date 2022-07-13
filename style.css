@@ -274,4 +274,30 @@ main {
     height: 70.94px;
     background-image: url(images/quest_alligator.png);
     background-size: contain;
+    z-index: 1;
+}
+
+#vortex {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-image: url(images/webb_nasa.jpeg);
+    background-position: 60px 100px;
+    position: absolute;
+    bottom: 390px;
+    left: 390px;
+    transform-origin: center;
+    animation-name: vortex;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes vortex {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
 }
