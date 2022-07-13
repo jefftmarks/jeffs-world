@@ -76,7 +76,9 @@ games.addEventListener("click", function() {
     gatorsBlock.style.display="none";
 
     gatorOne.style.display="initial";
+    gatorTwo.style.display="none";
     gatorThree.style.display="none";
+    gatorFour.style.display="none";
 });
 
 // age variables
