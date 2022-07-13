@@ -26,6 +26,7 @@ const questRules = document.getElementById("quest-rules");
 const questBoard = document.getElementById("quest-board");
 
 const questPiece = document.getElementById("quest-piece");
+const vortex = document.getElementById("vortex");
 
 // navbar mouseover and mouseout
 
@@ -176,6 +177,9 @@ quest.addEventListener("click", function() {
     catchBoard.style.display = "none";
 
     questBoard.style.display = "block";
+    questPiece.style.display = "initial";
+    questPiece.style.left = "0";
+    questPiece.style.bottom = "0";
 })
 
 // catch the gator game
@@ -202,7 +206,6 @@ gatorTwo.addEventListener("mouseover", function() {
 });
 
 gatorThree.addEventListener("click", function() {
-    //gatorThree.style.transform = "rotate(180deg)";
     alert("Wow... You won? I can't believe you won. Honestly, congratulations. I'm happy for you. You caught the alligator.");
 })
 
@@ -218,22 +221,26 @@ window.addEventListener("keydown", function(e) {
     switch(e.key) {
         case "ArrowLeft":
             if (parseInt(questPiece.style.left) > 0) {
-                questPiece.style.left = parseInt(questPiece.style.left) - 5 + "px";
+                questPiece.style.left = parseInt(questPiece.style.left) - 10 + "px";
             }
             break;
         case "ArrowRight":
-            if (parseInt(questPiece.style.left) < 400) {
-                questPiece.style.left = parseInt(questPiece.style.left) + 5 + "px";
+            if ((parseInt(questPiece.style.left) > 330) && (parseInt(questPiece.style.bottom) > 350)) {
+                questPiece.style.display = "none";
+            } else if (parseInt(questPiece.style.left) < 400) {
+                questPiece.style.left = parseInt(questPiece.style.left) + 10 + "px";
             }
             break;
         case "ArrowDown":
             if (parseInt(questPiece.style.bottom) > 0) {
-                questPiece.style.bottom = parseInt(questPiece.style.bottom) - 5 + "px";
+                questPiece.style.bottom = parseInt(questPiece.style.bottom) - 10 + "px";
             }
             break;
         case "ArrowUp":
-            if (parseInt(questPiece.style.bottom) < 429.06) {
-                questPiece.style.bottom = parseInt(questPiece.style.bottom) + 5 + "px";
+            if ((parseInt(questPiece.style.left) > 330) && (parseInt(questPiece.style.bottom) > 350)) {
+                questPiece.style.display = "none";
+            } else if (parseInt(questPiece.style.bottom) < 429.06) {
+                questPiece.style.bottom = parseInt(questPiece.style.bottom) + 10 + "px";
             }
             break;
     }
