@@ -208,8 +208,22 @@ gatorThree.addEventListener("click", function() {
 // gator quest game
 
 function moveGatorLeft () {
-    const 
-}
+    const leftNumbers = questPiece.style.left.replace("px", "");
+    const left = parseInt(leftNumbers, 10);
+
+    if (left > 0) {
+        questPiece.style.left = `${left - 5}px`;
+    }
+};
+
+function moveGatorRight () {
+    const leftNumbers = questPiece.style.left.replace("px", "");
+    const left = parseInt(leftNumbers, 10);
+
+    if (left < 400) {
+        questPiece.style.left = `${left + 5}px`;
+    }
+};
 
 document.addEventListener("keydown", function(e) {
     if (e.key === "ArrowLeft") {
