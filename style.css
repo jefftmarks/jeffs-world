@@ -270,7 +270,6 @@ main {
 }
 
 #quest-piece {
-    position: absolute;
     width: 100px;
     height: 70.94px;
     background-image: url(images/quest_alligator.png);

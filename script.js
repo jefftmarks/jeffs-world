@@ -30,95 +30,95 @@ const questPiece = document.getElementById("quest-piece");
 // navbar mouseover and mouseout
 
 bio.addEventListener("mouseover", function() {
-    gators.style.color="#fff";
-    games.style.color="#fff";
-    //bio.style.color="#0000EE";
-    bio.textContent="BIO";
+    gators.style.color = "#fff";
+    games.style.color = "#fff";
+    //bio.style.color = "#0000EE";
+    bio.textContent = "BIO";
 });
 bio.addEventListener("mouseout", function() {
-    gators.style.color="#000";
-    games.style.color="#000";
-    //bio.style.color="#000";
-    bio.textContent="Bio";
+    gators.style.color = "#000";
+    games.style.color = "#000";
+    //bio.style.color = "#000";
+    bio.textContent = "Bio";
 });
 
 gators.addEventListener("mouseover", function() {
-    bio.style.color="#fff";
-    games.style.color="#fff";
-    //gators.style.color="#0000EE";
-    gators.textContent="GATORS";
+    bio.style.color = "#fff";
+    games.style.color = "#fff";
+    //gators.style.color = "#0000EE";
+    gators.textContent = "GATORS";
 });
 gators.addEventListener("mouseout", function() {
-    bio.style.color="#000";
-    games.style.color="#000";
-    //gators.style.color="#000";
-    gators.textContent="Gators";
+    bio.style.color = "#000";
+    games.style.color = "#000";
+    //gators.style.color = "#000";
+    gators.textContent = "Gators";
 });
 
 games.addEventListener("mouseover", function() {
-    bio.style.color="#fff";
-    gators.style.color="#fff";
-    //games.style.color="#0000EE";
-    games.textContent="GAMES";
+    bio.style.color = "#fff";
+    gators.style.color = "#fff";
+    //games.style.color = "#0000EE";
+    games.textContent = "GAMES";
 });
 games.addEventListener("mouseout", function() {
-    bio.style.color="#000";
-    gators.style.color="#000";
-    //games.style.color="#000";
-    games.textContent="Games";
+    bio.style.color = "#000";
+    gators.style.color = "#000";
+    //games.style.color = "#000";
+    games.textContent = "Games";
 });
 
 // nav click
 
 bio.addEventListener("click", function() {
-    bioBlock.style.display="block";
-    gatorsBlock.style.display="none";
-    gamesBlock.style.display="none";
+    bioBlock.style.display = "block";
+    gatorsBlock.style.display = "none";
+    gamesBlock.style.display = "none";
 });
 
 gators.addEventListener("click", function() {
-    gatorsBlock.style.display="block";
-    bioBlock.style.display="none";
-    gamesBlock.style.display="none";
+    gatorsBlock.style.display = "block";
+    bioBlock.style.display = "none";
+    gamesBlock.style.display = "none";
 });
 
 games.addEventListener("click", function() {
-    gamesBlock.style.display="block";
-    bioBlock.style.display="none";
-    gatorsBlock.style.display="none";
+    gamesBlock.style.display = "block";
+    bioBlock.style.display = "none";
+    gatorsBlock.style.display = "none";
 
-    defaultRules.style.display="initial";
-    gamesNav.style.width="50%";
-    gamesLi.style.paddingTop="";
-    gamesLi.style.fontSize="";
-    catchRules.style.display="none";
-    questRules.style.display="none";
+    defaultRules.style.display = "initial";
+    gamesNav.style.width = "50%";
+    gamesLi.style.paddingTop = "";
+    gamesLi.style.fontSize = "";
+    catchRules.style.display = "none";
+    questRules.style.display = "none";
 
-    catchBoard.style.display="none";
-    questBoard.style.display="none";
+    catchBoard.style.display = "none";
+    questBoard.style.display = "none";
 });
 
 // nav mousedown & mouseup
 
 bio.addEventListener("mousedown", function() {
-    bio.style.color="red";
+    bio.style.color = "red";
 })
 bio.addEventListener("mouseup", function() {
-    bio.style.color="#000";
+    bio.style.color = "#000";
 })
 
 gators.addEventListener("mousedown", function() {
-    gators.style.color="red";
+    gators.style.color = "red";
 })
 gators.addEventListener("mouseup", function() {
-    gators.style.color="#000";
+    gators.style.color = "#000";
 })
 
 games.addEventListener("mousedown", function() {
-    games.style.color="red";
+    games.style.color = "red";
 })
 games.addEventListener("mouseup", function() {
-    games.style.color="#000";
+    games.style.color = "#000";
 })
 
 // age variables
@@ -137,67 +137,67 @@ exactAge.textContent = ageInDays / 365.25;
 // game nav
 
 catchGator.addEventListener("mousedown", function() {
-    catchGator.style.color="red";
+    catchGator.style.color = "red";
 })
 catchGator.addEventListener("mouseup", function() {
-    catchGator.style.color="#d732e6";
+    catchGator.style.color = "#d732e6";
 })
 
 quest.addEventListener("mousedown", function() {
-    quest.style.color="red";
+    quest.style.color = "red";
 })
 quest.addEventListener("mouseup", function() {
-    quest.style.color="#d732e6";
+    quest.style.color = "#d732e6";
 })
 
 catchGator.addEventListener("click", function() {
-    defaultRules.style.display="none";
-    gamesNav.style.width="40%";
-    gamesLi.style.paddingTop="7px";
-    gamesLi.style.fontSize="16px";
-    catchRules.style.display="initial";
-    questRules.style.display="none";
-    questBoard.style.display="none"
+    defaultRules.style.display = "none";
+    gamesNav.style.width = "40%";
+    gamesLi.style.paddingTop = "7px";
+    gamesLi.style.fontSize = "16px";
+    catchRules.style.display = "initial";
+    questRules.style.display = "none";
+    questBoard.style.display = "none"
 
-    catchBoard.style.display="block";
-    gatorOne.style.display="initial";
-    gatorTwo.style.display="none";
-    gatorThree.style.display="none";
-    gatorFour.style.display="none";
+    catchBoard.style.display = "block";
+    gatorOne.style.display = "initial";
+    gatorTwo.style.display = "none";
+    gatorThree.style.display = "none";
+    gatorFour.style.display = "none";
 })
 
 quest.addEventListener("click", function() {
-    defaultRules.style.display="none";
-    gamesNav.style.width="40%";
-    gamesLi.style.paddingTop="7px";
-    gamesLi.style.fontSize="16px";
-    questRules.style.display="initial";
-    catchRules.style.display="none";
-    catchBoard.style.display="none";
+    defaultRules.style.display = "none";
+    gamesNav.style.width = "40%";
+    gamesLi.style.paddingTop = "7px";
+    gamesLi.style.fontSize = "16px";
+    questRules.style.display = "initial";
+    catchRules.style.display = "none";
+    catchBoard.style.display = "none";
 
-    questBoard.style.display="block";
+    questBoard.style.display = "block";
 })
 
 // catch the gator game
 
 gatorOne.addEventListener("mouseover", function() {
-    if (gatorOne.style.display="initial") {
-        gatorOne.style.display="none";
-        gatorFour.style.display="initial";
+    if (gatorOne.style.display = "initial") {
+        gatorOne.style.display = "none";
+        gatorFour.style.display = "initial";
     };
 });
 
 gatorFour.addEventListener("mouseover", function() {
-    if (gatorFour.style.display="initial") {
-        gatorFour.style.display="none";
-        gatorTwo.style.display="initial";
+    if (gatorFour.style.display = "initial") {
+        gatorFour.style.display = "none";
+        gatorTwo.style.display = "initial";
     };
 });
 
 gatorTwo.addEventListener("mouseover", function() {
-    if (gatorTwo.style.display="initial") {
-        gatorTwo.style.display="none";
-        gatorThree.style.display="initial";
+    if (gatorTwo.style.display = "initial") {
+        gatorTwo.style.display = "none";
+        gatorThree.style.display = "initial";
     };
 });
 
@@ -207,35 +207,33 @@ gatorThree.addEventListener("click", function() {
 
 // gator quest game
 
-function moveGatorLeft () {
-    const leftNumbers = questPiece.style.left.replace("px", "");
-    const left = parseInt(leftNumbers, 10);
+window.addEventListener("load", function () {
+    questPiece.style.position = "absolute";
+    questPiece.style.left = 0;
+    questPiece.style.bottom = 0;
+})
 
-    if (left > 0) {
-        questPiece.style.left = `${left - 5}px`;
-    }
-};
-
-function moveGatorRight () {
-    const leftNumbers = questPiece.style.left.replace("px", "");
-    const left = parseInt(leftNumbers, 10);
-
-    if (left < 400) {
-        questPiece.style.left = `${left + 5}px`;
-    }
-};
-
-document.addEventListener("keydown", function(e) {
-    if (e.key === "ArrowLeft") {
-        moveGatorLeft();
-    }
-    if (e.key === "ArrowRight") {
-        moveGatorRight();
-    }
-    if (e.key === "ArrowUp") {
-        moveGatorUp();
-    }
-    if (e.key === "ArrowDown") {
-        moveGatorDown();
-    }
-});
+window.addEventListener("keydown", function(e) {
+    switch(e.key) {
+        case "ArrowLeft":
+            if (parseInt(questPiece.style.left) > 0) {
+                questPiece.style.left = parseInt(questPiece.style.left) - 5 + "px";
+            }
+            break;
+        case "ArrowRight":
+            if (parseInt(questPiece.style.left) < 400) {
+                questPiece.style.left = parseInt(questPiece.style.left) + 5 + "px";
+            }
+            break;
+        case "ArrowDown":
+            if (parseInt(questPiece.style.bottom) > 0) {
+                questPiece.style.bottom = parseInt(questPiece.style.bottom) - 5 + "px";
+            }
+            break;
+        case "ArrowUp":
+            if (parseInt(questPiece.style.bottom) < 400) {
+                questPiece.style.bottom = parseInt(questPiece.style.bottom) + 5 + "px";
+            }
+            break;
+}
+})
