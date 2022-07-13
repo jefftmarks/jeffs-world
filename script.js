@@ -15,6 +15,18 @@ const gatorTwo = document.getElementById("gator-2");
 const gatorThree = document.getElementById("gator-3");
 const gatorFour = document.getElementById("gator-4");
 
+const catchGator = document.getElementById("catch");
+const quest = document.getElementById("quest");
+const defaultRules = document.getElementById("default-rules");
+const gamesNav = document.getElementById("games-nav");
+const gamesLi = document.getElementById("games-li");
+const catchRules = document.getElementById("catch-rules");
+const catchBoard = document.getElementById("catch-board");
+const questRules = document.getElementById("quest-rules");
+const questBoard = document.getElementById("quest-board");
+
+const questPiece = document.getElementById("quest-piece");
+
 // navbar mouseover and mouseout
 
 bio.addEventListener("mouseover", function() {
@@ -75,10 +87,15 @@ games.addEventListener("click", function() {
     bioBlock.style.display="none";
     gatorsBlock.style.display="none";
 
-    gatorOne.style.display="initial";
-    gatorTwo.style.display="none";
-    gatorThree.style.display="none";
-    gatorFour.style.display="none";
+    defaultRules.style.display="initial";
+    gamesNav.style.width="50%";
+    gamesLi.style.paddingTop="";
+    gamesLi.style.fontSize="";
+    catchRules.style.display="none";
+    questRules.style.display="none";
+
+    catchBoard.style.display="none";
+    questBoard.style.display="none";
 });
 
 // nav mousedown & mouseup
@@ -117,24 +134,68 @@ const ageInDays = daysElapsed + (30.437 * monthsElapsed) + (365.25 * yearsElapse
 const exactAge = document.getElementById("age");
 exactAge.textContent = ageInDays / 365.25;
 
-// games mouseover
+// game nav
+
+catchGator.addEventListener("mousedown", function() {
+    catchGator.style.color="red";
+})
+catchGator.addEventListener("mouseup", function() {
+    catchGator.style.color="#d732e6";
+})
+
+quest.addEventListener("mousedown", function() {
+    quest.style.color="red";
+})
+quest.addEventListener("mouseup", function() {
+    quest.style.color="#d732e6";
+})
+
+catchGator.addEventListener("click", function() {
+    defaultRules.style.display="none";
+    gamesNav.style.width="40%";
+    gamesLi.style.paddingTop="7px";
+    gamesLi.style.fontSize="16px";
+    catchRules.style.display="initial";
+    questRules.style.display="none";
+    questBoard.style.display="none"
+
+    catchBoard.style.display="block";
+    gatorOne.style.display="initial";
+    gatorTwo.style.display="none";
+    gatorThree.style.display="none";
+    gatorFour.style.display="none";
+})
+
+quest.addEventListener("click", function() {
+    defaultRules.style.display="none";
+    gamesNav.style.width="40%";
+    gamesLi.style.paddingTop="7px";
+    gamesLi.style.fontSize="16px";
+    questRules.style.display="initial";
+    catchRules.style.display="none";
+    catchBoard.style.display="none";
+
+    questBoard.style.display="block";
+})
+
+// catch the gator game
 
 gatorOne.addEventListener("mouseover", function() {
-    if (gatorOne.style.display = "initial") {
+    if (gatorOne.style.display="initial") {
         gatorOne.style.display="none";
         gatorFour.style.display="initial";
     };
 });
 
 gatorFour.addEventListener("mouseover", function() {
-    if (gatorFour.style.display = "initial") {
+    if (gatorFour.style.display="initial") {
         gatorFour.style.display="none";
         gatorTwo.style.display="initial";
     };
 });
 
 gatorTwo.addEventListener("mouseover", function() {
-    if (gatorTwo.style.display = "initial") {
+    if (gatorTwo.style.display="initial") {
         gatorTwo.style.display="none";
         gatorThree.style.display="initial";
     };
@@ -143,3 +204,24 @@ gatorTwo.addEventListener("mouseover", function() {
 gatorThree.addEventListener("click", function() {
     alert("Wow... You won? I can't believe you won. Honestly, congratulations. I'm happy for you. You caught the alligator.");
 })
+
+// gator quest game
+
+function moveGatorLeft () {
+    const 
+}
+
+document.addEventListener("keydown", function(e) {
+    if (e.key === "ArrowLeft") {
+        moveGatorLeft();
+    }
+    if (e.key === "ArrowRight") {
+        moveGatorRight();
+    }
+    if (e.key === "ArrowUp") {
+        moveGatorUp();
+    }
+    if (e.key === "ArrowDown") {
+        moveGatorDown();
+    }
+});

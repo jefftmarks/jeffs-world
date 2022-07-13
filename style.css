@@ -115,42 +115,6 @@ main {
     color: #154a23;
 }
 
-#games-blockquote {
-    background: #f8e3fa;
-    /* color: #d732e6; */
-    width: 500px;
-    height: 100px;
-    padding: 10px;
-    border-radius: 0px 50px;
-    display: flex;
-    align-items: center;
-}
-
-/* #games-blockquote h5 {
-    margin-top: -8px;
-    color: #6e2375;
-} */
-
-#games-nav {
-    border-right: solid 1px black;
-    width: 50%;
-    height: 100px;
-}
-
-#games-nav ul {
-    list-style: none;
-    font-size: 1.17em;
-    font-weight: bold;
-    color: #d732e6;
-    text-align: right;
-    padding-right: 25px;
-    padding-top: 2px;
-}
-
-#games-nav li {
-    margin-bottom: 20px;
-}
-
 /* gallery styles */
 
 #gallery {
@@ -172,7 +136,84 @@ main {
     border-radius: 10px;
   }
 
-  /* game styles */
+/* game styles */
+
+#games-blockquote {
+    background: #f8e3fa;
+    /* color: #d732e6; */
+    width: 500px;
+    height: 100px;
+    padding: 10px;
+    border-radius: 0px 50px;
+    display: flex;
+    align-items: center;
+}
+
+#games-nav {
+    border-right: solid 1px black;
+    width: 50%;
+    height: 100px;
+}
+
+#games-nav ul {
+    list-style: none;
+    font-size: 1.17em;
+    font-weight: bold;
+    color: #d732e6;
+    text-align: right;
+    padding-right: 25px;
+    padding-top: 3px;
+}
+
+#games-nav li {
+    margin-bottom: 15px;
+}
+
+#games-nav li:hover {
+    text-decoration: underline 2px;
+    cursor: pointer;
+}
+
+#default-rules {
+    width: 50%;
+    padding: 30px;
+    line-height: 25px;
+    color: #6e2375;
+}
+
+#default-rules p {
+    text-align: center;
+}
+
+#catch-rules {
+    display: none;
+    width: 60%;
+    padding-left: 25px;
+}
+
+#catch-rules h3 {
+    color: #6e2375;
+}
+
+#catch-rules p {
+    margin-top: -10px;
+}
+
+#quest-rules {
+    display: none;
+    width: 60%;
+    padding-left: 25px;
+}
+
+#quest-rules h3 {
+    color: #6e2375;
+}
+
+#quest-rules p {
+    margin-top: -10px;
+}
+
+/* catch styles */
 
 #catch-board {
     width: 500px;
@@ -215,4 +256,25 @@ main {
     display: none;
     left: 250px;
     bottom: 0px;
+}
+
+/* quest styles */
+
+#quest-board {
+    background-color: #b8dbff;
+    width: 500px;
+    height: 500px;
+    position: relative;
+    display: none;
+    margin-top: 20px;
+}
+
+#quest-piece {
+    position: absolute;
+    width: 100px;
+    height: 70.94px;
+    background-image: url(images/quest_alligator.png);
+    background-size: contain;
+    bottom: 0px;
+    left: 0px;
 }
