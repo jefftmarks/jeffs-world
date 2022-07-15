@@ -164,6 +164,7 @@ catchGator.addEventListener("click", function() {
     gatorOne.style.display = "initial";
     gatorTwo.style.display = "none";
     gatorThree.style.display = "none";
+    gatorThree.style.animationName = "";
     gatorFour.style.display = "none";
 })
 
@@ -205,7 +206,17 @@ gatorTwo.addEventListener("mouseover", function() {
     };
 });
 
+function gatorFlop () {
+    gatorThree.style.transformOrigin = "center";
+    gatorThree.style.animationName = "flop";
+    gatorThree.style.animationDuration = "1s";
+    gatorThree.style.animationIterationCount = "1";
+    gatorThree.style.animationFillMode = "forwards";
+    gatorThree.style.animationTimingFunction = "linear";
+}
+
 gatorThree.addEventListener("click", function() {
+    gatorFlop();
     alert("Wow... You won? I can't believe you won. Honestly, congratulations. I'm happy for you. You caught the alligator.");
 })
 
