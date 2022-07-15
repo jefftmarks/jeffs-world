@@ -182,9 +182,7 @@ quest.addEventListener("click", function() {
     questPiece.style.position = "absolute";
     questPiece.style.left = "0";
     questPiece.style.bottom = "0";
-    vortex.style.animationName = "vortex";
-    vortex.style.animationDuration = "10s";
-    winner.style.display = "none";
+    questPiece.style.animationName = "";
 })
 
 // catch the gator game
@@ -226,6 +224,16 @@ gatorThree.addEventListener("click", function() {
 
 // gator quest game
 
+function gatorSkew () {
+    questPiece.style.transformOrigin = "center";
+    questPiece.style.animationName = "skew";
+    questPiece.style.animationDuration = "1s";
+    questPiece.style.animationIterationCount = "1";
+    questPiece.style.animationFillMode = "forwards";
+    questPiece.style.animationTimingFunction = "linear";
+}
+
+
 window.addEventListener("keydown", function(e) {
     switch(e.key) {
         case "ArrowLeft":
@@ -234,11 +242,13 @@ window.addEventListener("keydown", function(e) {
             }
             break;
         case "ArrowRight":
-            if ((parseInt(questPiece.style.left) > 330) && (parseInt(questPiece.style.bottom) > 350)) {
-                questPiece.style.display = "none";
-                vortex.style.animationName = "skew";
-                vortex.style.animationDuration = "5s";
-                vortex.style.animationIterationCount = "1";y
+            if ((parseInt(questPiece.style.left) > 350) && (parseInt(questPiece.style.bottom) > 370)) {
+                gatorSkew();
+                alert("Approaching the singularity...");
+                //questPiece.style.display = "none";
+                //vortex.style.animationName = "skew";
+                //vortex.style.animationDuration = "5s";
+                //vortex.style.animationIterationCount = "1";y
             } else if (parseInt(questPiece.style.left) < 400) {
                 questPiece.style.left = parseInt(questPiece.style.left) + 10 + "px";
             }
@@ -249,11 +259,13 @@ window.addEventListener("keydown", function(e) {
             }
             break;
         case "ArrowUp":
-            if ((parseInt(questPiece.style.left) > 330) && (parseInt(questPiece.style.bottom) > 350)) {
-                questPiece.style.display = "none";
-                vortex.style.animationName = "skew";
-                vortex.style.animationDuration = "5s";
-                vortex.style.animationIterationCount = "1";
+            if ((parseInt(questPiece.style.left) > 350) && (parseInt(questPiece.style.bottom) > 370)) {
+                gatorSkew();
+                alert("Approaching the singularity...");
+                //questPiece.style.display = "none";
+                //vortex.style.animationName = "skew";
+                //vortex.style.animationDuration = "5s";
+                //vortex.style.animationIterationCount = "1";
             } else if (parseInt(questPiece.style.bottom) < 429.06) {
                 questPiece.style.bottom = parseInt(questPiece.style.bottom) + 10 + "px";
             }

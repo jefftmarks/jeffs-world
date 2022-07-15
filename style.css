@@ -6,6 +6,7 @@ body {
     background: #fff;
     font-family: sans-serif;
     color: #000;
+    overflow-y: hidden;
 }
 
 /* navbar styles */
@@ -315,16 +316,7 @@ main {
     0% {
         transform: skew(0deg, 0deg);
     } 
-    25% {
-        transform: skew(15deg, 15deg);
-    }
-    50% {
-        transform: skew(0deg, 0deg);
-    }
-    75% {
-        transform: skew(-15deg, -15deg);
-    }
     100% {
-        transform: skew(0deg, 0deg);
+        transform: skew(90deg);
     }
 }
