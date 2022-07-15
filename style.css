@@ -293,6 +293,15 @@ main {
     animation-timing-function: linear;
 }
 
+@keyframes flop {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(-180deg);
+    }
+}
+
 @keyframes vortex {
     0% {
         transform: rotate(0deg);
@@ -302,11 +311,20 @@ main {
     }
 }
 
-@keyframes flop {
+@keyframes skew {
     0% {
-        transform: rotate(0deg);
+        transform: skew(0deg, 0deg);
+    } 
+    25% {
+        transform: skew(15deg, 15deg);
+    }
+    50% {
+        transform: skew(0deg, 0deg);
+    }
+    75% {
+        transform: skew(-15deg, -15deg);
     }
     100% {
-        transform: rotate(-180deg);
+        transform: skew(0deg, 0deg);
     }
 }
