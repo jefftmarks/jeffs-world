@@ -23,10 +23,16 @@ const gamesLi = document.getElementById("games-li");
 const catchRules = document.getElementById("catch-rules");
 const catchBoard = document.getElementById("catch-board");
 const questRules = document.getElementById("quest-rules");
-const questBoard = document.getElementById("quest-board");
 
-const questPiece = document.getElementById("quest-piece");
-const vortex = document.getElementById("vortex");
+const questBoard1 = document.getElementById("quest-board-1");
+const questPiece1 = document.getElementById("quest-piece-1");
+const vortex1 = document.getElementById("vortex-1");
+
+const questBoard2 = document.getElementById("quest-board-2");
+const vortex2 = document.getElementById("vortex-2");
+
+const questBoard3 = document.getElementById("quest-board-3");
+const vortex3 = document.getElementById("vortex-3");
 
 // navbar mouseover and mouseout
 
@@ -96,8 +102,14 @@ games.addEventListener("click", function() {
     questRules.style.display = "none";
 
     catchBoard.style.display = "none";
-    questBoard.style.display = "none";
+    questBoard1.style.display = "none";
+    questBoard2.style.display = "none";
+    questBoard3.style.display = "none";
+    questPiece1.style.display = "none";
+    questPiece1.style.animationName = "";
+    
 });
+
 
 // nav mousedown & mouseup
 
@@ -158,7 +170,7 @@ catchGator.addEventListener("click", function() {
     gamesLi.style.fontSize = "16px";
     catchRules.style.display = "initial";
     questRules.style.display = "none";
-    questBoard.style.display = "none"
+    questBoard1.style.display = "none"
 
     catchBoard.style.display = "block";
     gatorOne.style.display = "initial";
@@ -177,12 +189,15 @@ quest.addEventListener("click", function() {
     catchRules.style.display = "none";
     catchBoard.style.display = "none";
 
-    questBoard.style.display = "block";
-    questPiece.style.display = "initial";
-    questPiece.style.position = "absolute";
-    questPiece.style.left = "0";
-    questPiece.style.bottom = "0";
-    questPiece.style.animationName = "";
+    questBoard1.style.display = "block";
+    vortex1.style.display = "initial";
+    questPiece1.style.display = "initial";
+    questPiece1.style.position = "absolute";
+    questPiece1.style.left = "0";
+    questPiece1.style.bottom = "0";
+    questPiece1.style.animationName = "";
+    questBoard2.style.display = "none";
+    questBoard3.style.display = "none";
 })
 
 // catch the gator game
@@ -225,49 +240,141 @@ gatorThree.addEventListener("click", function() {
 // gator quest game
 
 function gatorSkew () {
-    questPiece.style.transformOrigin = "center";
-    questPiece.style.animationName = "skew";
-    questPiece.style.animationDuration = "1s";
-    questPiece.style.animationIterationCount = "1";
-    questPiece.style.animationFillMode = "forwards";
-    questPiece.style.animationTimingFunction = "linear";
+    questPiece1.style.transformOrigin = "center";
+    questPiece1.style.animationName = "gator-skew";
+    questPiece1.style.animationDuration = "3s";
+    questPiece1.style.animationIterationCount = "1";
+    questPiece1.style.animationFillMode = "forwards";
+    questPiece1.style.animationTimingFunction = "linear";
 }
 
+
+// quest board 1
 
 window.addEventListener("keydown", function(e) {
     switch(e.key) {
         case "ArrowLeft":
-            if (parseInt(questPiece.style.left) > 0) {
-                questPiece.style.left = parseInt(questPiece.style.left) - 10 + "px";
+            if (parseInt(questPiece1.style.left) > 0) {
+                questPiece1.style.left = parseInt(questPiece1.style.left) - 5 + "px";
             }
             break;
         case "ArrowRight":
-            if ((parseInt(questPiece.style.left) > 350) && (parseInt(questPiece.style.bottom) > 370)) {
-                gatorSkew();
-                alert("Approaching the singularity...");
-                //questPiece.style.display = "none";
-                //vortex.style.animationName = "skew";
-                //vortex.style.animationDuration = "5s";
-                //vortex.style.animationIterationCount = "1";y
-            } else if (parseInt(questPiece.style.left) < 400) {
-                questPiece.style.left = parseInt(questPiece.style.left) + 10 + "px";
+            if ((parseInt(questPiece1.style.left) > 350) && (parseInt(questPiece1.style.bottom) > 370)) {
+                questBoard1.style.display = "none";
+                vortex1.style.display = "none";
+                questBoard2.style.display = "block";
+                vortex2.style.display = "initial";
+                questPiece1.style.left = "0px";
+                questPiece1.style.bottom = "0px";
+            } else if (parseInt(questPiece1.style.left) < 400) {
+                questPiece1.style.left = parseInt(questPiece1.style.left) + 5 + "px";
             }
             break;
         case "ArrowDown":
-            if (parseInt(questPiece.style.bottom) > 0) {
-                questPiece.style.bottom = parseInt(questPiece.style.bottom) - 10 + "px";
+            if (parseInt(questPiece1.style.bottom) > 0) {
+                questPiece1.style.bottom = parseInt(questPiece1.style.bottom) - 5 + "px";
             }
             break;
         case "ArrowUp":
-            if ((parseInt(questPiece.style.left) > 350) && (parseInt(questPiece.style.bottom) > 370)) {
+            if ((parseInt(questPiece1.style.left) > 350) && (parseInt(questPiece1.style.bottom) > 370)) {
+                questBoard1.style.display = "none";
+                vortex1.style.display = "none";
+                questBoard2.style.display = "block";
+                vortex2.style.display = "initial";
+                questPiece1.style.left = "0px";
+                questPiece1.style.bottom = "0px";
+            } else if (parseInt(questPiece1.style.bottom) < 429.06) {
+                questPiece1.style.bottom = parseInt(questPiece1.style.bottom) + 5 + "px";
+            }
+            break;
+    }
+})
+
+
+// quest board 2
+
+window.addEventListener("keydown", function(e) {
+    switch(e.key) {
+        case "ArrowLeft":
+            if ((parseInt(questPiece1.style.left) > 140) && (parseInt(questPiece1.style.left) < 260) && (parseInt(questPiece1.style.bottom) > 160) && (parseInt(questPiece1.style.bottom) < 269.06)) {
+                questBoard2.style.display = "none";
+                vortex2.style.display = "none";
+                questBoard3.style.display = "block";
+                vortex3.style.display = "initial";
+                questPiece1.style.left = "0px";
+                questPiece1.style.bottom = "0px";
+            } else if (parseInt(questPiece1.style.left) > 0) {
+                questPiece1.style.left = parseInt(questPiece1.style.left) - 5 + "px";
+            }
+            break;
+        case "ArrowRight":
+            if ((parseInt(questPiece1.style.left) > 140) && (parseInt(questPiece1.style.left) < 260) && (parseInt(questPiece1.style.bottom) > 160) && (parseInt(questPiece1.style.bottom) < 269.06)) {
+                questBoard2.style.display = "none";
+                vortex2.style.display = "none";
+                questBoard3.style.display = "block";
+                vortex3.style.display = "initial";
+                questPiece1.style.left = "0px";
+                questPiece1.style.bottom = "0px";
+            } else if (parseInt(questPiece1.style.left) < 400) {
+                questPiece1.style.left = parseInt(questPiece1.style.left) + 5 + "px";
+            }
+            break;
+        case "ArrowDown":
+            if ((parseInt(questPiece1.style.left) > 140) && (parseInt(questPiece1.style.left) < 260) && (parseInt(questPiece1.style.bottom) > 160) && (parseInt(questPiece1.style.bottom) < 269.06)) {
+                questBoard2.style.display = "none";
+                vortex2.style.display = "none";
+                questBoard3.style.display = "block";
+                vortex3.style.display = "initial";
+                questPiece1.style.left = "0px";
+                questPiece1.style.bottom = "0px";
+            } else if (parseInt(questPiece1.style.bottom) > 0) {
+                questPiece1.style.bottom = parseInt(questPiece1.style.bottom) - 5 + "px";
+            }
+            break;
+        case "ArrowUp":
+            if ((parseInt(questPiece1.style.left) > 140) && (parseInt(questPiece1.style.left) < 260) && (parseInt(questPiece1.style.bottom) > 160) && (parseInt(questPiece1.style.bottom) < 269.06)) {
+                questBoard2.style.display = "none";
+                vortex2.style.display = "none";
+                questBoard3.style.display = "block";
+                vortex3.style.display = "initial";
+                questPiece1.style.left = "0px";
+                questPiece1.style.bottom = "0px";
+            } else if (parseInt(questPiece1.style.bottom) < 429.06) {
+                questPiece1.style.bottom = parseInt(questPiece1.style.bottom) + 5 + "px";
+            }
+            break;
+    }
+})
+
+
+// quest board 3
+
+window.addEventListener("keydown", function(e) {
+    switch(e.key) {
+        case "ArrowLeft":
+            if (parseInt(questPiece1.style.left) > 0) {
+                questPiece1.style.left = parseInt(questPiece1.style.left) - 5 + "px";
+            }
+            break;
+        case "ArrowRight":
+            if ((parseInt(questPiece1.style.left) > 350) && (parseInt(questPiece1.style.bottom) < 50)) {
                 gatorSkew();
-                alert("Approaching the singularity...");
-                //questPiece.style.display = "none";
-                //vortex.style.animationName = "skew";
-                //vortex.style.animationDuration = "5s";
-                //vortex.style.animationIterationCount = "1";
-            } else if (parseInt(questPiece.style.bottom) < 429.06) {
-                questPiece.style.bottom = parseInt(questPiece.style.bottom) + 10 + "px";
+                alert("WARNING! Approaching the singularity...");
+            } else if (parseInt(questPiece1.style.left) < 400) {
+                questPiece1.style.left = parseInt(questPiece1.style.left) + 5 + "px";
+            }
+            break;
+        case "ArrowDown":
+            if ((parseInt(questPiece1.style.left) > 350) && (parseInt(questPiece1.style.bottom) < 50)) {
+                gatorSkew();
+                alert("WARNING! Approaching the singularity...");
+            } else if (parseInt(questPiece1.style.bottom) > 0) {
+                questPiece1.style.bottom = parseInt(questPiece1.style.bottom) - 5 + "px";
+            }
+            break;
+        case "ArrowUp":
+            if (parseInt(questPiece1.style.bottom) < 429.06) {
+                questPiece1.style.bottom = parseInt(questPiece1.style.bottom) + 5 + "px";
             }
             break;
     }
