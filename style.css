@@ -33,6 +33,19 @@ h1 {
     margin-left: -10px;
 }
 
+#nav-gator {
+    width: 50%;
+    height: 70.94px;
+    background-image: url(images/quest_alligator.png);
+    background-size: cover;
+    margin-left: 18px;
+    margin-right: 20px;
+    animation-name: gator-skew;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
 #smiley-face {
     font-size: 40px;
 }
@@ -259,16 +272,11 @@ main {
     bottom: 0px;
 }
 
+
 /* quest styles */
 
-#quest-ghost {
-    width: 500px;
-    height: 500px;
-    position: relative;
-}
-
 #quest-board-1 {
-    background: linear-gradient(#518ac4, #b8dbff);
+    background: radial-gradient(at 98% 2%, #70fdff, #2e88f0);
     width: 500px;
     height: 500px;
     position: relative;
@@ -301,56 +309,6 @@ main {
     animation-timing-function: linear;
 }
 
-#quest-board-2 {
-    background: radial-gradient(#fff, #bfbfbf, #000);
-    width: 500px;
-    height: 500px;
-    position: relative;
-    display: none;
-    margin-top: 20px;
-}
-
-#vortex-2 {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    background-image: url(images/webb_nasa.jpeg);
-    background-position: 60px 100px;
-    position: absolute;
-    bottom: 200px;
-    left: 200px;
-    transform-origin: center;
-    animation-name: skew;
-    animation-duration: 0.5s;
-    animation-iteration-count: infinite;
-    animation-timing-function: linear;
-}
-
-#quest-board-3 {
-    background: linear-gradient(#ffc021, #9c6322);
-    width: 500px;
-    height: 500px;
-    position: relative;
-    display: none;
-    margin-top: 20px;
-}
-
-#vortex-3 {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    background-image: url(images/webb_nasa.jpeg);
-    background-position: 60px 100px;
-    position: absolute;
-    bottom: 10px;
-    left: 390px;
-    transform-origin: center;
-    animation-name: vortex;
-    animation-duration: 2s;
-    animation-iteration-count: infinite;
-    animation-timing-function: linear;
-}
-
 @keyframes flop {
     0% {
         transform: rotate(0deg);
@@ -369,29 +327,20 @@ main {
     }
 }
 
-@keyframes skew {
+@keyframes gator-skew {
     0% {
         transform: skew(0deg, 0deg);
     } 
     25% {
-        transform: skew(2deg, 2deg);
+        transform: skew(7deg, 7deg);
     }
     50% {
         transform: skew(0deg, 0deg);
-    } 
+    }
     75% {
-        transform: skew(-2deg, -2deg);
+        transform: skew(-7deg, -7deg);
     }
     100% {
         transform: skew(0deg, 0deg);
-    }
-}
-
-@keyframes gator-skew {
-    0% {
-        transform: skew(0deg);
-    } 
-    100% {
-        transform: skew(90deg);
     }
 }

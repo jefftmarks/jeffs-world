@@ -28,11 +28,10 @@ const questBoard1 = document.getElementById("quest-board-1");
 const questPiece1 = document.getElementById("quest-piece-1");
 const vortex1 = document.getElementById("vortex-1");
 
-const questBoard2 = document.getElementById("quest-board-2");
-const vortex2 = document.getElementById("vortex-2");
+const smiley = document.getElementById("smiley-face");
+const navGator = document.createElement("div");
+navGator.setAttribute("id", "nav-gator");
 
-const questBoard3 = document.getElementById("quest-board-3");
-const vortex3 = document.getElementById("vortex-3");
 
 // navbar mouseover and mouseout
 
@@ -103,10 +102,6 @@ games.addEventListener("click", function() {
 
     catchBoard.style.display = "none";
     questBoard1.style.display = "none";
-    questBoard2.style.display = "none";
-    questBoard3.style.display = "none";
-    questPiece1.style.display = "none";
-    questPiece1.style.animationName = "";
     
 });
 
@@ -163,6 +158,9 @@ quest.addEventListener("mouseup", function() {
     quest.style.color = "#d732e6";
 })
 
+
+// catch the gator game
+
 catchGator.addEventListener("click", function() {
     defaultRules.style.display = "none";
     gamesNav.style.width = "40%";
@@ -179,28 +177,6 @@ catchGator.addEventListener("click", function() {
     gatorThree.style.animationName = "";
     gatorFour.style.display = "none";
 })
-
-quest.addEventListener("click", function() {
-    defaultRules.style.display = "none";
-    gamesNav.style.width = "40%";
-    gamesLi.style.paddingTop = "7px";
-    gamesLi.style.fontSize = "16px";
-    questRules.style.display = "initial";
-    catchRules.style.display = "none";
-    catchBoard.style.display = "none";
-
-    questBoard1.style.display = "block";
-    vortex1.style.display = "initial";
-    questPiece1.style.display = "initial";
-    questPiece1.style.position = "absolute";
-    questPiece1.style.left = "0";
-    questPiece1.style.bottom = "0";
-    questPiece1.style.animationName = "";
-    questBoard2.style.display = "none";
-    questBoard3.style.display = "none";
-})
-
-// catch the gator game
 
 gatorOne.addEventListener("mouseover", function() {
     if (gatorOne.style.display = "initial") {
@@ -239,6 +215,26 @@ gatorThree.addEventListener("click", function() {
 
 // gator quest game
 
+quest.addEventListener("click", function() {
+    questMechanics();
+    smileySwap();
+
+    defaultRules.style.display = "none";
+    gamesNav.style.width = "40%";
+    gamesLi.style.paddingTop = "7px";
+    gamesLi.style.fontSize = "16px";
+    questRules.style.display = "initial";
+    catchRules.style.display = "none";
+    catchBoard.style.display = "none";
+
+    questBoard1.style.display = "block";
+    vortex1.style.display = "initial";
+    questPiece1.style.display = "initial";
+    questPiece1.style.position = "absolute";
+    questPiece1.style.left = "0";
+    questPiece1.style.bottom = "0";
+})
+
 function gatorSkew () {
     questPiece1.style.transformOrigin = "center";
     questPiece1.style.animationName = "gator-skew";
@@ -248,134 +244,57 @@ function gatorSkew () {
     questPiece1.style.animationTimingFunction = "linear";
 }
 
+function gatorSwap () {
+    const parentDiv = document.getElementById("jeffs-world").parentNode;
+    const jeffsWorld = document.getElementById("jeffs-world");
+    jeffsWorld.style.width = "50%";
+    parentDiv.insertBefore(navGator, jeffsWorld);
+}
 
-// quest board 1
+function smileySwap () {
+    navGator.remove();
 
-window.addEventListener("keydown", function(e) {
-    switch(e.key) {
-        case "ArrowLeft":
-            if (parseInt(questPiece1.style.left) > 0) {
-                questPiece1.style.left = parseInt(questPiece1.style.left) - 5 + "px";
-            }
-            break;
-        case "ArrowRight":
-            if ((parseInt(questPiece1.style.left) > 350) && (parseInt(questPiece1.style.bottom) > 370)) {
-                questBoard1.style.display = "none";
-                vortex1.style.display = "none";
-                questBoard2.style.display = "block";
-                vortex2.style.display = "initial";
-                questPiece1.style.left = "0px";
-                questPiece1.style.bottom = "0px";
-            } else if (parseInt(questPiece1.style.left) < 400) {
-                questPiece1.style.left = parseInt(questPiece1.style.left) + 5 + "px";
-            }
-            break;
-        case "ArrowDown":
-            if (parseInt(questPiece1.style.bottom) > 0) {
-                questPiece1.style.bottom = parseInt(questPiece1.style.bottom) - 5 + "px";
-            }
-            break;
-        case "ArrowUp":
-            if ((parseInt(questPiece1.style.left) > 350) && (parseInt(questPiece1.style.bottom) > 370)) {
-                questBoard1.style.display = "none";
-                vortex1.style.display = "none";
-                questBoard2.style.display = "block";
-                vortex2.style.display = "initial";
-                questPiece1.style.left = "0px";
-                questPiece1.style.bottom = "0px";
-            } else if (parseInt(questPiece1.style.bottom) < 429.06) {
-                questPiece1.style.bottom = parseInt(questPiece1.style.bottom) + 5 + "px";
-            }
-            break;
-    }
-})
+    const parentDiv = document.getElementById("jeffs-world").parentNode;
+    const jeffsWorld = document.getElementById("jeffs-world");
+    jeffsWorld.style.width = "";
+    parentDiv.insertBefore(smiley, jeffsWorld);
+}
 
-
-// quest board 2
-
-window.addEventListener("keydown", function(e) {
-    switch(e.key) {
-        case "ArrowLeft":
-            if ((parseInt(questPiece1.style.left) > 140) && (parseInt(questPiece1.style.left) < 260) && (parseInt(questPiece1.style.bottom) > 160) && (parseInt(questPiece1.style.bottom) < 269.06)) {
-                questBoard2.style.display = "none";
-                vortex2.style.display = "none";
-                questBoard3.style.display = "block";
-                vortex3.style.display = "initial";
-                questPiece1.style.left = "0px";
-                questPiece1.style.bottom = "0px";
-            } else if (parseInt(questPiece1.style.left) > 0) {
-                questPiece1.style.left = parseInt(questPiece1.style.left) - 5 + "px";
-            }
-            break;
-        case "ArrowRight":
-            if ((parseInt(questPiece1.style.left) > 140) && (parseInt(questPiece1.style.left) < 260) && (parseInt(questPiece1.style.bottom) > 160) && (parseInt(questPiece1.style.bottom) < 269.06)) {
-                questBoard2.style.display = "none";
-                vortex2.style.display = "none";
-                questBoard3.style.display = "block";
-                vortex3.style.display = "initial";
-                questPiece1.style.left = "0px";
-                questPiece1.style.bottom = "0px";
-            } else if (parseInt(questPiece1.style.left) < 400) {
-                questPiece1.style.left = parseInt(questPiece1.style.left) + 5 + "px";
-            }
-            break;
-        case "ArrowDown":
-            if ((parseInt(questPiece1.style.left) > 140) && (parseInt(questPiece1.style.left) < 260) && (parseInt(questPiece1.style.bottom) > 160) && (parseInt(questPiece1.style.bottom) < 269.06)) {
-                questBoard2.style.display = "none";
-                vortex2.style.display = "none";
-                questBoard3.style.display = "block";
-                vortex3.style.display = "initial";
-                questPiece1.style.left = "0px";
-                questPiece1.style.bottom = "0px";
-            } else if (parseInt(questPiece1.style.bottom) > 0) {
-                questPiece1.style.bottom = parseInt(questPiece1.style.bottom) - 5 + "px";
-            }
-            break;
-        case "ArrowUp":
-            if ((parseInt(questPiece1.style.left) > 140) && (parseInt(questPiece1.style.left) < 260) && (parseInt(questPiece1.style.bottom) > 160) && (parseInt(questPiece1.style.bottom) < 269.06)) {
-                questBoard2.style.display = "none";
-                vortex2.style.display = "none";
-                questBoard3.style.display = "block";
-                vortex3.style.display = "initial";
-                questPiece1.style.left = "0px";
-                questPiece1.style.bottom = "0px";
-            } else if (parseInt(questPiece1.style.bottom) < 429.06) {
-                questPiece1.style.bottom = parseInt(questPiece1.style.bottom) + 5 + "px";
-            }
-            break;
-    }
-})
-
-
-// quest board 3
-
-window.addEventListener("keydown", function(e) {
-    switch(e.key) {
-        case "ArrowLeft":
-            if (parseInt(questPiece1.style.left) > 0) {
-                questPiece1.style.left = parseInt(questPiece1.style.left) - 5 + "px";
-            }
-            break;
-        case "ArrowRight":
-            if ((parseInt(questPiece1.style.left) > 350) && (parseInt(questPiece1.style.bottom) < 50)) {
-                gatorSkew();
-                alert("WARNING! Approaching the singularity...");
-            } else if (parseInt(questPiece1.style.left) < 400) {
-                questPiece1.style.left = parseInt(questPiece1.style.left) + 5 + "px";
-            }
-            break;
-        case "ArrowDown":
-            if ((parseInt(questPiece1.style.left) > 350) && (parseInt(questPiece1.style.bottom) < 50)) {
-                gatorSkew();
-                alert("WARNING! Approaching the singularity...");
-            } else if (parseInt(questPiece1.style.bottom) > 0) {
-                questPiece1.style.bottom = parseInt(questPiece1.style.bottom) - 5 + "px";
-            }
-            break;
-        case "ArrowUp":
-            if (parseInt(questPiece1.style.bottom) < 429.06) {
-                questPiece1.style.bottom = parseInt(questPiece1.style.bottom) + 5 + "px";
-            }
-            break;
-    }
-})
+function questMechanics () {
+    window.addEventListener("keydown", function gatorMove(e) {
+        switch(e.key) {
+            case "ArrowLeft":
+                if (parseInt(questPiece1.style.left) > 0) {
+                    questPiece1.style.left = parseInt(questPiece1.style.left) - 10 + "px";
+                }
+                break;
+            case "ArrowRight":
+                if ((parseInt(questPiece1.style.left) > 350) && (parseInt(questPiece1.style.bottom) > 370)) {
+                    removeEventListener("keydown", gatorMove);
+                    alert("Something... unexpected... is happening...")
+                    questPiece1.style.display = "none";
+                    smiley.remove();
+                    gatorSwap();
+                } else if (parseInt(questPiece1.style.left) < 400) {
+                    questPiece1.style.left = parseInt(questPiece1.style.left) + 10 + "px";
+                }
+                break;
+            case "ArrowDown":
+                if (parseInt(questPiece1.style.bottom) > 0) {
+                    questPiece1.style.bottom = parseInt(questPiece1.style.bottom) - 10 + "px";
+                }
+                break;
+            case "ArrowUp":
+                if ((parseInt(questPiece1.style.left) > 350) && (parseInt(questPiece1.style.bottom) > 370)) {
+                    removeEventListener("keydown", gatorMove);
+                    alert("Something... unexpected... is happening...")
+                    questPiece1.style.display = "none";
+                    smiley.remove();
+                    gatorSwap();
+                } else if (parseInt(questPiece1.style.bottom) < 429.06) {
+                    questPiece1.style.bottom = parseInt(questPiece1.style.bottom) + 10 + "px";
+                }
+                break;
+        }
+    })
+}
