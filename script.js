@@ -271,7 +271,6 @@ function questMechanics () {
             case "ArrowRight":
                 if ((parseInt(questPiece1.style.left) > 350) && (parseInt(questPiece1.style.bottom) > 370)) {
                     removeEventListener("keydown", gatorMove);
-                    alert("Something... unexpected... is happening...")
                     questPiece1.style.display = "none";
                     smiley.remove();
                     gatorSwap();
@@ -287,7 +286,6 @@ function questMechanics () {
             case "ArrowUp":
                 if ((parseInt(questPiece1.style.left) > 350) && (parseInt(questPiece1.style.bottom) > 370)) {
                     removeEventListener("keydown", gatorMove);
-                    alert("Something... unexpected... is happening...")
                     questPiece1.style.display = "none";
                     smiley.remove();
                     gatorSwap();
